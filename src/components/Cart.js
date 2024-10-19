@@ -19,19 +19,19 @@ function Cart() {
     <h2 style={{marginTop:'100px',textAlign:'center'}}>CartItems</h2>
     <h4 style={{textAlign:'end'}}>Price={totalprice/100}</h4>
     <div className="container">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div className="row row-cols-1 row-cols-md-3 g-4">
       {cartItems.map((item,i)=>{
-       return <div class="card mb-3">
-       <div class="row g-0">
-         <div class="col-md-4">
-           <img src={item.img} class="img-fluid rounded-start" alt="..."/>
+       return <div className="card mb-3">
+       <div className="row g-0">
+         <div className="col-md-4">
+           <img src={item.img} className="img-fluid rounded-start" alt="..."/>
          </div>
-         <div class="col-md-8">
-           <div class="card-body">
-             <h5 class="card-title">{item.Name}</h5>
-             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-             <p class="card-text"><b>{item.Price/100}</b>rps</p>
-             <button type="button" class="btn btn-danger" onClick={()=>{
+         <div className="col-md-8">
+           <div className="card-body">
+             <h5 className="card-title">{item.Name}</h5>
+             <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+             <p className="card-text"><b>{item.Price/100}</b>rps</p>
+             <button type="button" className="btn btn-danger" onClick={()=>{
                 dispatch(removeFromCart(i))
              }}>remove to cart</button>
            </div>
